@@ -1,16 +1,197 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import "../node_modules/bulma/css/bulma.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+  --synlimite-mainColor: #061b3b;
+  --synlimite-secondaryColor: #003161;
+  --rounded: 5px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body,
+main {
+  min-height: 100vh;
 }
 
-* {
-  box-sizing: border-box;
+main {
+  background-color: #eeeeee;
+}
+
+.mainNav {
+  background-color: var(--synlimite-mainColor);
+}
+
+.secondaryMenu {
+  background-color: var(--synlimite-secondaryColor);
+}
+
+.navSearchForm {
+  position: relative;
+  width: 360px;
+}
+
+.navSearchForm__button {
+  position: absolute;
+  right: 0;
+}
+
+.accountForm {
+  min-width: 360px;
+  max-width: 400px;
+  border: 1px solid #dbdbdb;
+  border-radius: var(--rounded);
+}
+
+.personalInfoForm{
+  min-width: 360px;
+  max-width: 500px;
+  border: 1px solid #dbdbdb;
+  border-radius: var(--rounded);
+}
+
+
+.productImagePreview {
+  width: 100px;
+  height: 100px;
+  background-color: #808080;
+  border-radius: var(--rounded);
+}
+
+.categoryCard {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: var(--rounded);
+}
+
+.categoryCard__footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  width: 100%;
+  background-color: #000000c4;
+}
+
+.verticalProductCard {
+  width: 245px;
+  height: 300px;
+  background-color: #ffffff;
+  border-radius: var(--rounded);
+  border: 1px solid #dbdbdb;
+}
+
+.verticalProductCard:hover {
+  opacity: 90%;
+}
+
+.verticalProductCard__imgContainer {
+  width: 100%;
+  height: 220px;
+  background-color: #dbdbdb;
+}
+
+.searchResultsRecipient {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto, minmax(200px, 1fr));
+  height: fit-content;
+
+  gap: 25px;
+}
+
+.searchResultsFilter {
+  width: 200px;
+  min-height: 100vw;
+}
+
+.businessProfileInfoCard{
+  width: 250px;
+}
+
+.accountPanel{
+  width: 230px;
+  min-height: 300px;
+}
+
+.accountPanel__option{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60px;
+}
+
+.imagesRecipient{
+  width: 360px;
+}
+
+.productPost__PrimaryImageContainer{
+  width: 100%;
+  height: 300px;
+  background-color: grey;
+  border-radius: var(--rounded);
+}
+
+.productPost__SecondaryImageContainer{
+  width:80px;
+  height:80px;
+  background-color: grey;
+  border-radius: var(--rounded);
+
+
+}
+
+.accountPanel__option:hover{
+  background-color: #dbdbdb;
+  cursor: pointer;
+}
+
+.commentsRecipient{
+  display: grid;
+  grid-template-columns: repeat(4,minmax(200px,1fr));
+  grid-template-rows: repeat(auto,minmax(200px,1fr));
+  gap: 25px;
+
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.comment{
+  width: 300px;
+  max-height: 250px;
+  background-color: #dbdbdb;
+  border-radius: var(--rounded);
+}
+
+.descriptionRecipient{
+  width: 100%;
+  max-height: 300px;
+  overflow-y: scroll;
+  border-radius: var(--rounded);
+  background-color: #dbdbdb;
+}
+
+.carrousell-btn{
+  position: absolute;
+
+}
+
+.carrousell-back-btn{
+  left: 0;
+}
+
+.carrousell-next-btn{
+  right: 0;
+}
+
+
+@media screen and (max-width: 1234px) {
+  .searchResultsRecipient {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .searchResultsRecipient {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
 }
